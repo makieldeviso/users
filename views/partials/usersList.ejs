@@ -1,0 +1,9 @@
+<ul>
+<% users.map(user => { %>
+    <li>
+      <p><%= user.firstName %></p>
+      <p><%= user.lastName %></p>
+    </li>
+    <button class="link-button update" data-link="/update/<%=user.id%>">Update</button>
+<% }) %>
+</ul>

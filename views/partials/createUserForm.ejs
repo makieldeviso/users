@@ -1,0 +1,20 @@
+<form method="POST" action="/create">
+  <label for="firstName">Full Name:</label>
+  <input type="text" name="firstName" id="firstName" placeholder="John Doe">
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" name="lastName" id="lastName" placeholder="John Doe">
+
+  <button type="submit">Submit</button>
+</form>
+
+<% if (locals.errors) { %>
+
+  <ul>
+    <% locals.errors.map(err => { %>
+      <li><%= err.msg %></li>
+    <% }) %>
+  </ul>
+
+<% } %>
+

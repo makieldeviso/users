@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <h1>Home</h1>
+
+  <%- include('../partials/usersList', {users: users})%>
+
+  <button class="link-button create-user" data-link="/create">Create User</button>
+</body>
+</html>
