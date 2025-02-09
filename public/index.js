@@ -1,4 +1,4 @@
-
+// Open Link
 const linkButtons = document.querySelectorAll('.link-button');
 const openPageWithButton = function () {
   const url = this.dataset.link
@@ -7,6 +7,7 @@ const openPageWithButton = function () {
 
 linkButtons.forEach(button => button.addEventListener('click', openPageWithButton, {once: true}));
 
+// Delete
 const deleteButtons = document.querySelectorAll('.delete');
 
 const openDialog = function () {

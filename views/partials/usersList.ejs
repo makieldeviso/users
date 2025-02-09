@@ -3,6 +3,9 @@
     <li>
       <p><%= user.firstName %></p>
       <p><%= user.lastName %></p>
+      <p><%=user.email%></p>
+      <p><%=user.age%></p>
+      <p><%=user.bio%></p>
       <button class="link-button update" data-link="/update/<%=user.id%>">Update</button>
       <button class="dialog-button delete" data-id="<%=user.id%>">Delete</button>
 

@@ -4,9 +4,9 @@ class UsersStorage {
     this.id = 0;
   }
 
-  addUser({firstName, lastName}) {
+  addUser({firstName, lastName, email, age, bio}) {
     const id = this.id;
-    const newUser = {id, firstName, lastName};
+    const newUser = {id, firstName, lastName, email, age, bio};
     this.storage[this.id] = newUser;
     this.id++;
   }
@@ -19,8 +19,8 @@ class UsersStorage {
     return this.storage[id];
   }
 
-  updateUser(id, {firstName, lastName}) {
-    this.storage[id] = {id, firstName, lastName};
+  updateUser(id, {firstName, lastName, email, age, bio}) {
+    this.storage[id] = {id, firstName, lastName, email, age, bio };
   }
 
   deleteUser(id) {
@@ -30,9 +30,9 @@ class UsersStorage {
 }
 
 const usersStorage = new UsersStorage();
-usersStorage.addUser({firstName: 'Fred', lastName:'Baldeviso'});
-usersStorage.addUser({firstName: 'Ervin', lastName:'Rinos'});
-usersStorage.addUser({firstName: 'Charles', lastName:'Derion'});
-usersStorage.addUser({firstName: 'Christian', lastName:'Bardalo'});
+usersStorage.addUser({firstName: 'Fred', lastName:'Baldeviso', email: 'fred.baldeviso@email.com', age: 27, bio: 'hello im fred'});
+usersStorage.addUser({firstName: 'Ervin', lastName:'Rinos', email: 'ervin.rinos@email.com', age: 27, bio: 'hello im ervin'});
+usersStorage.addUser({firstName: 'Charles', lastName:'Derion', email: 'charles.derion@email.com', age: 27, bio: 'hello im charles'});
+usersStorage.addUser({firstName: 'Christian', lastName:'Bardalo', email: 'christian.bardalo@email.com', age: 27, bio: 'hello im christian'});
 
 export default usersStorage;

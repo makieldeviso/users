@@ -1,9 +1,19 @@
 <form method="POST" action="/create">
+
   <label for="firstName">Full Name:</label>
-  <input type="text" name="firstName" id="firstName" placeholder="John Doe">
+  <input type="text" name="firstName" id="firstName" placeholder="John" value="<%=user.firstName%>">
 
   <label for="lastName">Last Name:</label>
-  <input type="text" name="lastName" id="lastName" placeholder="John Doe">
+  <input type="text" name="lastName" id="lastName" placeholder="Doe" value="<%=user.lastName%>">
+
+  <label for="email">E-mail:</label>
+  <input type="text" name="email" id="email" placeholder="john.doe@email.com" value="<%=user.email%>">
+
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age" min="18" max="120" value="<%=user.age%>">
+
+  <label for="bio">Bio:</label>
+  <textarea name="bio" id="bio" maxlength="200"><%=user.bio%></textarea>
 
   <button type="submit">Submit</button>
 </form>

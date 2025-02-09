@@ -7,10 +7,11 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <h1>Home</h1>
-  <%- include('../partials/searchBar')%>
+  <h2>Search</h2>
+
   <%- include('../partials/usersList', {users: users})%>
 
-  <button class="link-button create-user" data-link="/create">Create User</button>
+  <button class="link-button home" data-link="/">Home</button>
+
 </body>
 </html>
