@@ -6,3 +6,15 @@ const openPageWithButton = function () {
 }
 
 linkButtons.forEach(button => button.addEventListener('click', openPageWithButton, {once: true}));
+
+const deleteButtons = document.querySelectorAll('.delete');
+
+const openDialog = function () {
+  const id = this.dataset.id;
+  const deleteDialog = document.querySelector(`.delete-dialog[data-id="${id}"]`);
+  deleteDialog.showModal();
+}
+
+deleteButtons.forEach(btn => {
+  btn.addEventListener('click', openDialog);
+})

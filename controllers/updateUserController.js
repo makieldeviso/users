@@ -42,7 +42,7 @@ const updateUserController = {
       if (!errors.isEmpty()) {
        console.log(req)
        console.log(firstName, lastName)
-        return res.render(path.join(__root, '/views/pages', 'updateUser'),
+        return res.status(400).render(path.join(__root, '/views/pages', 'updateUser'),
           {
             user: user,
             title: 'Update user',

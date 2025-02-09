@@ -30,5 +30,9 @@ class UsersStorage {
 }
 
 const usersStorage = new UsersStorage();
+usersStorage.addUser({firstName: 'Fred', lastName:'Baldeviso'});
+usersStorage.addUser({firstName: 'Ervin', lastName:'Rinos'});
+usersStorage.addUser({firstName: 'Charles', lastName:'Derion'});
+usersStorage.addUser({firstName: 'Christian', lastName:'Bardalo'});
 
 export default usersStorage;

@@ -8,13 +8,3 @@
   <button type="submit">Submit</button>
 </form>
 
-<% if (locals.errors) { %>
-
-  <ul>
-    <% locals.errors.map(err => { %>
-      <li><%= err.msg %></li>
-    <% }) %>
-  </ul>
-
-<% } %>
-

@@ -10,6 +10,7 @@ import { body, validationResult } from "express-validator";
 import createRouter from "./routes/createRouter.js";
 import homeRouter from "./routes/homeRouter.js";
 import updateUserRouter from "./routes/updateUserRouter.js";
+import deleteRouter from "./routes/deleteRouter.js";
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,6 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 //  Router setup
 app.use('/create', createRouter);
 app.use('/update', updateUserRouter);
+app.use('/delete', deleteRouter);
 app.use('/', homeRouter);
 
 app.listen(port, () => {

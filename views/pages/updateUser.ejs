@@ -11,14 +11,7 @@
   
   <%- include('../partials/updateUserForm'), {user: user} %>
 
-  
-  <% if (locals.errors) { %>
-    <ul>
-      <% errors.map(err => { %>
-        <li><%= err.msg %></li>
-      <% }) %>
-    </ul>
-  <% } %>
+  <%- include('../partials/errors') %>
 
 </body>
 </html>

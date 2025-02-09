@@ -3,7 +3,18 @@
     <li>
       <p><%= user.firstName %></p>
       <p><%= user.lastName %></p>
+      <button class="link-button update" data-link="/update/<%=user.id%>">Update</button>
+      <button class="dialog-button delete" data-id="<%=user.id%>">Delete</button>
+
+      <dialog class="delete-dialog" data-id="<%=user.id%>">
+        <form action="/delete/<%=user.id%>" method="POST">
+          <p>Are you sure you want to delete?</p>
+          <p><%=user.firstName%> <%=user.lastName%></p>
+          <button class="confirm-button delete-no" name="confirm" value="no">No</button>
+          <button class="confirm-button delete-yes" name="confirm" value="yes">Yes</button>
+        </form>
+      </dialog>
     </li>
-    <button class="link-button update" data-link="/update/<%=user.id%>">Update</button>
+    
 <% }) %>
 </ul>
